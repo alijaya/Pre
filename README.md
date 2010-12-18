@@ -34,6 +34,7 @@ Example
 So we can use the sample folder for example...
 
 First check on `sample/Main.hx`, as you see the code does like this:
+
 1. make a Loader instance
 2. get tronImage data from resource and load it
 3. scale the image (because the image too big :p)
@@ -59,5 +60,5 @@ cd path/to/Pre/sample
 And you will get `TestSwf(Preloader).swf`, try it, you will see no progress if you open it on desktop, try to upload it somewhere and see if it works.
 
 
-To check it how it works, you can see it here : http://spamtheweb.com/ul/s18112010115_Pre.html
+To check it how it works, you can see it [here](http://spamtheweb.com/ul/s18112010115_Pre.html)
 
