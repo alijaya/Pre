@@ -1,0 +1,5 @@
+-main Main
+-swf9 TestSwf.swf
+-swf-version 9
+-swf-header 640:480:30:FFFFFF
+-resource tron.jpg@tronImage

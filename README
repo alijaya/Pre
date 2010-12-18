@@ -1,0 +1,49 @@
+The purpose of this library is to create preloader on your swf app easily...
+
+So the concept is to warp the main swf as a binary and embed it to preloader swf...
+
+So the the binary is in frame 2, and the preloader in frame 1... so we can wait to load... and after that finish, the preloader add the main swf to the stage.
+
+And then you don't have to make a swf separately to desktop (no preloader) and with preloader...
+
+Just make it normally (without preloader)... and the... you make another swf that contains the preloader logic...
+
+And then we can combine it with the tools this library provided...
+like this
+neko tools/Pre.n preloader.swf main.swf
+
+And you will get main(Preloader).swf file...
+
+Sooo... this is how to make it...
+First... make sure you have a main swf file that you want to add preloader..., for example TestMain.swf
+
+And then... you must create a preloader... make a hx file for example Preloader.hx
+in Preloader.hx... make sure it contains main function, because this class is the "main" class.
+extends Preloader class with Pre
+The "Pre" class is a shortcut class to make you preloader, it handle the loading, and create the main part.
+In Preloader constructor... call super(mainClass)
+the mainClass is the name of the main swf... in this case is "TestMain"
+Override the progress function... it has 2 parameter, loaded and total... use it for updating the preloader...
+And then if you want to add button play or another thing when it's completed, override the complete function, otherwise it default function is to change instantly from preloader to main application.
+
+That's it :D... compile your preloader (we assume the output is Preloader.swf), you can test your preloader with opening it :D (i have already give a feature to simulate the preloader)
+
+so everything is fine :D...
+
+And then go to tools... there is a Pre.n file...
+launch it in terminal like this
+neko Pre.n file/to/Preloader.swf file/to/TestMain.swf
+
+tada... you are complete :D, you will get TestMain(Preloader).swf it contains your main swf with preloader...
+
+And then... may be you think you like your preloader and want to use it many times... so it can be happen :D...
+may be you have another file call it "AnotherTest.swf"
+so you must to rename it to "TestMain.swf", why? because the Preloader expect the name must TestMain..., do it like before... you get the new file... and rename it back :p
+
+
+
+Again... i have include a template for simple preloading...
+You can see its action in sample folder :D
+
+
+Sooo... for the example of preloading you can see it here : http://spamtheweb.com/ul/s18112010115_Pre.html

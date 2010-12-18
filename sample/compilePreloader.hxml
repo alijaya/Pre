@@ -1,0 +1,5 @@
+-main Preloader
+-swf9 Preloader.swf
+-swf-version 9
+-swf-header 480:320:30:FFFFFF
+-cp ../
